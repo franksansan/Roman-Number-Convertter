@@ -1,0 +1,16 @@
+function convertToRoman(num) {
+ var rm= ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV", "I"];
+ var sz= [1000,900,500,400,100,90,50,40, 10, 9, 5, 4, 1];
+var result= "";
+sz.forEach((item,index)=>{
+    while(item<=num){
+      result += rm[index];
+      num -= sz[index];
+}
+})
+
+
+ return result;
+}
+
+convertToRoman(4);
